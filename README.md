@@ -76,7 +76,7 @@ This program intend to make more people to know this great game.
 4. Brief user guide
    To start the function correctly, user should downloaded whole files and put them together and set a 
    secrets.py contains "google_palces_key" which is API key of Google Places API and "MAPBOX_TOKEN"  
-   which is the mapbox key for plotly. 
+   which is the mapbox key for plotly. The package used in the project is shown in the "requirements.txt".
    When all settle down, run "Query.py" to start the system. The system will ask user to input command 
    to continue. User could input "help" to check specific command list for the different kind of queries 
    or just input "player", "team", "winrate", "premier", "race" or "map" to check the result of default 
