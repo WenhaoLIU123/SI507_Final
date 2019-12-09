@@ -1,77 +1,103 @@
 
 Commands available:
-
-bars
-	Description: Lists chocolate bars, according the specified parameters.
+help
+    Description: Output the helper manual
+exit
+    Description: Quit the program
+player
+	Description: Lists the basic infomation of players, according the specified parameters.
 
 	Options:
-		* sellcountry=<name>|sourcecountry=<name>|
-			sellregion=<name>|sourceregion=<geo_name> [default: none]
-		Description: Specifies a country or region within which to limit the
-		results, and also specifies whether to limit by the seller
-		(or manufacturer) or by the bean origin source.
+		* id=<Game id> [default: none]
+		Description: Specifies a player'ID used in game to limit the
+		             result. Only one player's infomation will return as result
 
-		* ratings|cocoa [default: ratings]
-		Description: Specifies whether to sort by rating or cocoa percentage
+		* name=<Name> [default: none]
+		Description: Specifies a player'real to limit the
+		result. Only one player's infomation will return as result
+
+		* country=<Country> [default:none]
+		Description: Specifies players' nation to limit the result
+
+		* region=<Region> [default: none]
+		Description: Specifies players' nation's region to limit the result
+
+        REMINDER: If those four options above are used at the same time, only the last option will be input to
+        the query system
+
+		* race=<Race> [default:none]
+		Description: Specifies players' race used in game to limit the result
+
+		* Earning|vALL|vP|vT|vZ [default:Earning]
+		Description: Specifies whether to sort by player's total earning, vsALL winrate,
+		vsProtoss winrate, vsTerran winrate and vsZerg winrate to limit the result
 
 		* top=<limit>|bottom=<limit> [default: top=10]
 		Description: Specifies whether to list the top <limit> matches or the
 		bottom <limit> matches.
 
-companies
-	Description: Lists chocolate bars sellers according to the specified parameters.
-	Only companies that sell at least 4 different kinds of bars
-	are listed in results.
+team
+	Description: Lists the basic information of teams including the basic infomation of players
+	             according the specified paramters.
 
 	Options:
-		* country=<name>|region=<name> [default: none]
-		Description: Specifies a country or region within which to limit the
-		results.
+		* team=<team_name> [default: KaiZi Gaming]
+		Description: Specifies a team name to limit the result
 
-		* ratings|cocoa|bars_sold [default: ratings]
-		Description: Specifies whether to sort by rating, cocoa percentage, or
-		the number of different types of bars sold
+		* race=<Race> [default:none]
+		Description: Specifies players' race used in game in the team to limit the result
+
+		* Earning|vALL|vP|vT|vZ [default:Earning]
+		Description: Specifies whether to sort by player's total earning, vsALL winrate,
+		vsProtoss winrate, vsTerran winrate and vsZerg winrate in the team to limit the result
 
 		* top=<limit>|bottom=<limit> [default: top=10]
 		Description: Specifies whether to list the top <limit> matches or the
 		bottom <limit> matches.
 
-countries
-	Description: Lists countries according to specified parameters.
-	Only countries that sell/source at least 4 different kinds of bars
-	are listed in results.
+winrate
+	Description: Lists the winning rate of different players of all games played
+	             according the specified paramters.
 
 	Options:
-		* region=<name> [default: none]
-		Description: Specifies a region within which to limit the
-		results.
+		* name=<team_name> [default: KaiZi Gaming]
+		Description: Specifies a team name to limit the result
 
-		* sellers|sources [default: sellers]
-		Description: Specifies whether to select countries based sellers or bean
-		sources.
+		* race=<Race> [default:none]
+		Description: Specifies players' race used in game in the team to limit the result
 
-		* ratings|cocoa|bars_sold [default: ratings]
-		Description: Specifies whether to sort by rating, cocoa percentage, or
-		the number of different types of bars sold
+		* Earning|vALL|vP|vT|vZ [default:Earning]
+		Description: Specifies whether to sort by player's total earning, vsALL winrate,
+		vsProtoss winrate, vsTerran winrate and vsZerg winrate in the team to limit the result
 
 		* top=<limit>|bottom=<limit> [default: top=10]
 		Description: Specifies whether to list the top <limit> matches or the
 		bottom <limit> matches.
 
-regions
-	Description: Lists regions according to specified parameters.
-	Only regions that sell/source at least 4 different kinds of bars are
-	listed in results.
+
+premier
+	Description: Lists infomation of premier tournaments hold in 2019 according to specified parameters.
 
 	Options:
-		* sellers|sources [default: sellers]
-		Description: Specifies whether to select countries based sellers or bean
-		sources.
+		* series=<name>|name=<name> [default: none]
+		Description: Specifies the series that premier tournaments belond to or the specific name of the premier
+		tournament to limit the reuslt. When name is specified only one result will be returned.
 
-		* ratings|cocoa|bars_sold [default: ratings]
-		Description: Specifies whether to sort by rating, cocoa percentage, or
-		the number of different types of bars sold
+		* prize|players [default: prize]
+		Description: Specifies whether to sort by the prize of the tournament or
+		the number of players who attend the tournament
 
-		* top=<limit>|bottom=<limit> [default: top=10]
-		Description: Specifies whether to list the top <limit> matches or the
-		bottom <limit> matches.
+		* winnerrace=<race> [default:none]
+		Description: Specifies the race of the winner of the tournamnet to limit the result
+
+race
+	Description: Lists the distribution of the race used in the game according to specified parameters
+
+	Options:
+		* country=<name>|region=<region_name> [default: Korea (Republic of)]
+		Description: Specifies one country's or region's race(in game) distribution to limit the reuslt. .
+
+		* team=<team> [default: none]
+        Description: Specifies one team's race(in game) distribution to limit the reuslt.
+map
+    Description: Draw the distribution of the premier tournaments hold in 2019
