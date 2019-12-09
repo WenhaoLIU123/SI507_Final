@@ -27,3 +27,5 @@ This program intend to make more people to know this great game.
    The project uses plotly to make table and graphs and the links to getting started info for plotly is:
    https://plot.ly/python/getting-started/
    https://plot.ly/python/scattermapbox/
+3. Brief description of code structure
+   Serveal functions are used in this project and some data structures are created for data processing
