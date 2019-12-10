@@ -28,6 +28,7 @@ This program intend to make more people to know this great game.
    The project uses plotly to make table and graphs and the links to getting started info for plotly is:
    https://plot.ly/python/getting-started/
    https://plot.ly/python/scattermapbox/
+   
    During crawling the information and winrate of the players a 2-second waiting is set to avoid banned from the website.
 3. Brief description of code structure
 
