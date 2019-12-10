@@ -60,9 +60,6 @@ winrate
 	             according the specified paramters.
 
 	Options:
-		* name=<team_name> [default: KaiZi Gaming]
-		Description: Specifies a team name to limit the result
-
 		* race=<Race> [default:none]
 		Description: Specifies players' race used in game in the team to limit the result
 
