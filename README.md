@@ -76,13 +76,14 @@ This program intend to make more people to know this great game.
       contain four basic test parts and each test part has at least one test case and each of test case 
       has at least assert function or fail test. 17 tests in total and more than 30 asserat conditions.
 4. Brief user guide
+
    To start the function correctly, user should downloaded whole files and put them together and set a 
    secrets.py contains "google_palces_key" which is API key of Google Places API and "MAPBOX_TOKEN"  
    which is the mapbox key for plotly. The package used in the project is shown in the "requirements.txt".
-   When all settle down, run "Query.py" to start the system. The system will ask user to input command 
-   to continue. User could input "help" to check specific command list for the different kind of queries 
-   or just input "player", "team", "winrate", "premier", "race" or "map" to check the result of default 
-   value. 
+   When all settle down, run " python Query.py" in command line to start the system. The system will ask
+   user to input command to continue. User could input "help" to check specific command list for the 
+   different kind of queries or just input "player", "team", "winrate", "premier", "race" or "map" to 
+   check the result of default value. Additionally, run " python final_test.py" to run the unittests .
  
         Remeber to split options with comma and here is the command list that used for further detailed query:
 
@@ -151,10 +152,10 @@ This program intend to make more people to know this great game.
 
             Options:
             
-                * race=<Race> [default:none]
+                * race=<Race> [default:Zerg]
                 Description: Specifies players' race used in game in the team to limit the result
 
-                * Earning|vALL|vP|vT|vZ [default:Earning]
+                * vALL|vP|vT|vZ [default:vALL]
                 Description: Specifies whether to sort by player's total earning, vsALL winrate,
                 vsProtoss winrate, vsTerran winrate and vsZerg winrate in the team to limit the result
 
