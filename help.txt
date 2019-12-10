@@ -60,10 +60,10 @@ winrate
 	             according the specified paramters.
 
 	Options:
-		* race=<Race> [default:none]
+		* race=<Race> [default:Zerg]
 		Description: Specifies players' race used in game in the team to limit the result
 
-		* Earning|vALL|vP|vT|vZ [default:Earning]
+		* vALL|vP|vT|vZ [default:vALL]
 		Description: Specifies whether to sort by player's total earning, vsALL winrate,
 		vsProtoss winrate, vsTerran winrate and vsZerg winrate in the team to limit the result
 
