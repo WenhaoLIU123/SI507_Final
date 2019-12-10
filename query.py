@@ -4,6 +4,7 @@ import plotly.graph_objs as go
 from scrape import *
 from builddatabase import *
 def plot_pattern1(result):
+    print("Plotting...")
     tid=[x[0] for x in result]
     tname=[x[1] for x in result]
     tcountry=[x[2] for x in result]
@@ -19,6 +20,7 @@ def plot_pattern1(result):
     fig.update_layout(title="The Searching Result according to the Query Options")
     fig.show()
 def plot_bar(result,kind,race):
+    print("Plotting...")
     type=kind[3:]
     tid=[x[0] for x in result]
     text=[x[1] for x in result]
@@ -35,6 +37,7 @@ def plot_bar(result,kind,race):
     fig.update_layout(title=race+type)
     fig.show()
 def plot_pattern2(result):
+    print("Plotting...")
     tname=[x[0] for x in result]
     tseries=[x[1] for x in result]
     tprize=[x[2] for x in result]
@@ -47,6 +50,7 @@ def plot_pattern2(result):
     fig.update_layout(title="The information of premier tournaments in 2019")
     fig.show()
 def plot_pie(result,country,team):
+    print("Plotting...")
     if len(country)==0:
         country='all around the world'
     if len(team)==0:
@@ -384,9 +388,9 @@ def interactive_prompt():
     response = ''
     command_list=['help','exit','player','team','race','winrate','premier','map']
     print('''Welcome to the StarCraftII information query system. Thank you for being
-            intereted in StarCraftII.Please input the query command below.If it is the
-            first time you use the system or just need some help you could input "help"
-            to get the using manual of this system. Thank you very much!
+intereted in StarCraftII.Please input the query command below.If it is the
+first time you use the system or just need some help you could input "help"
+to get the using manual of this system. Thank you very much!
         ''')
     while response != 'exit':
         response = input('Please,enter a command and split options with "," or input "help" to get user manual: ')
@@ -403,6 +407,7 @@ def interactive_prompt():
                 if len(response.split(','))>1:
                     print('Command not recognized: '+response)
                 else:
+                    print("Plotting...")
                     plot_premier()
                 continue
             elif response.split(',')[0].lower() =='exit':
@@ -428,6 +433,7 @@ def interactive_prompt():
 
 
 if __name__=="__main__":
+    print("Initialization...might need 20 minutes if you choose do not using cache")
     get_players_from_liquidpedia()
     get_premier_from_liquidpedia()
     build_database()

@@ -1,8 +1,7 @@
 import requests
 import json
 from bs4 import BeautifulSoup
-import plotly
-import plotly.graph_objs as go
+import time
 from secrets import google_places_key
 
 
@@ -41,6 +40,7 @@ def make_request_using_cache(url, header=None,content=None,API=False):
             return CACHE_DICTION[unique_ident]
         # Make the request and cache the new data
         resp = requests.get(url, headers=header).text
+        time.sleep(2)
         if content is None:
             CACHE_DICTION[unique_ident] = resp
             dumped_json_cache = json.dumps(CACHE_DICTION)
